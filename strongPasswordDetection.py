@@ -1,4 +1,4 @@
-import re
+import re, pyinputplus as pyip
 
 regexDigit = re.compile(r'\d')      #A digit
 regexSpec = re.compile(r'\W')       #A special character
@@ -19,7 +19,7 @@ def checkPassword(password):        #Function to run through the regexes and che
     else:
         return True
 
-pw = input('Enter a password for me to check ;)\n')
+pw = pyip.inputPassword('Enter a password for me to check ;)\n')
 
 if checkPassword(pw) == True:
     print('Wow, you\'ve got a strong password! Very impressive ^O^')
